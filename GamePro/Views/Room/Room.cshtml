@@ -1,0 +1,1134 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html class="js cssanimations">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微风竞技</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <link rel="stylesheet" href="~/Content/amazeui.css">
+    <link rel="stylesheet" href="~/Content/app.css">
+    <link rel="stylesheet" href="~/Content/index.css">
+    <link rel="stylesheet" href="~/Content/jquery-labelauty.css">
+    <!--必要样式-->
+    <style>
+        .ovfHiden {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li {
+            margin: 5px 0 0;
+        }
+
+        ol, ul {
+            padding-left: 0.5rem;
+        }
+
+        input.labelauty + label {
+            font: 12px "Microsoft Yahei";
+        }
+
+        input.labelauty + label {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        .header-content {
+            float: left;
+            width: 250px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .search {
+            height: 30px;
+            border: 1px solid #d4d4d4;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 100%;
+            padding-left: 40px;
+            font-size: 12px;
+            background-image: url('~/Img/search.png');
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position: 18px 6px;
+            color: #999;
+        }
+
+        .header-right {
+            width: 65px;
+            float: left;
+            padding: 8px 10px 9px 10px;
+        }
+
+        .search-btn {
+            color: #F6DB7F;
+            display: inline-block;
+            border: 2px solid #F6DB7F;
+            border-radius: 10px;
+            width: 45px;
+            text-align: center;
+            height: 32px;
+            line-height: 28px;
+            font-size: 15px;
+        }
+
+        .am-slider-a1 .am-control-nav li a.am-active {
+            background: #FFF;
+        }
+
+        .ring {
+            width: 100%;
+            height: auto;
+            color: #FFF;
+            font-size: 12px;
+        }
+
+        .ring-list {
+            width: 100%;
+            /*height: 190px;*/
+            padding: 5px 0;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .ring-1v1 {
+            background: url("~/Img/ring_bg1.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .ring-3v3 {
+            background: url("~/Img/ring_bg2.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .ring-5v5 {
+            background: url("~/Img/ring_bg3.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .oath {
+            display: inline-block;
+            width: 100%;
+            color: #FFF;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .username {
+            display: inline-block;
+            width: 100%;
+            color: #FFF;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+            vertical-align: bottom;
+        }
+
+        .ring-list-detail span {
+            display: block;
+        }
+
+        a, a:hover, a:focus, a:visited {
+            color: #FFF;
+        }
+
+        .select-box {
+            background: #FFF;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 76px;
+            z-index: 9999;
+            display: none;
+            overflow: scroll;
+        }
+
+        .select-header {
+            line-height: 27px;
+            padding: 0 10px;
+            border-bottom: 1px solid #ECECEC;
+        }
+
+            .select-header span {
+                font-size: 14px;
+                color: #666;
+                vertical-align: middle;
+            }
+
+            .select-header img {
+                float: right;
+                -ms-transform: rotate(90deg); /* IE 9 */
+                -moz-transform: rotate(90deg); /* Firefox */
+                -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+                -o-transform: rotate(90deg); /* Opera */
+                transform: rotate(90deg);
+                margin-right: 10px;
+                margin-top: 7px;
+            }
+
+        .select-item {
+            padding: 5px 15px 0;
+            color: #333;
+            font-size: 12px;
+        }
+
+        .select-footer {
+            text-align: center;
+            margin: 10px 0 40px;
+        }
+
+        .confirm-btn {
+            color: #F6DB7F;
+            background: #333;
+            font-size: 16px;
+            border-radius: 3px;
+            width: 108px;
+            text-align: center;
+            line-height: 31px;
+            display: inline-block;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .sort-item {
+            width: 20%;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+            color: #999;
+            margin: 3px 0;
+            font-size: 12px;
+            border-right: 1px solid #999;
+        }
+
+            .sort-item:last-child {
+                border: 0;
+            }
+
+        .selectcolor {
+            color: #F6DB7F;
+        }
+
+        .newRoad {
+            color: #555;
+        }
+
+        .am-header .am-header-title {
+            overflow: inherit;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="~/Content/layer.css" id="layuicss-skinlayercss">
+</head>
+
+<body class="am-with-fixed-navbar">
+    <input id="room_pagenum_hidden" value="1" type="hidden">
+    <input id="type" value="" type="hidden">
+    <input id="level" value="6" type="hidden">
+    <header data-am-widget="header" class="am-header am-header-default am-no-layout">
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                星耀 钻石战区擂台列表
+            </a>
+        </h1>
+    </header>
+    <div class="am-g" style="background: #333;max-width: 640px;position: relative">
+
+        <div class="header-content" style="width: 515px;">
+            <input class="search" id="search" placeholder="搜索擂台号或筛选" type="search">
+        </div>
+        <div class="header-right ">
+            <a href="#"><span class="search-btn" onclick="onSerach()">搜索</span></a>
+        </div>
+
+        <div class="select-box" style="height: 630px;">
+            <!--<div class="select-header">-->
+            <!--<span>筛选</span><img src="~/Img/right.png" width="10" alt="">-->
+            <!--</div>-->
+
+            <div class="select-item">
+                <span>选择战区</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="region" value="1" class="labelauty" id="zq1" style="display: none;" type="radio"><label for="zq1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">微信区</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">微信区</span></label></li>
+                    <li><input name="region" value="0" class="labelauty" id="zq2" style="display: none;" type="radio"><label for="zq2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">QQ区</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">QQ区</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item">
+                <span>比赛模式</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="model" value="0" class="labelauty" id="model1" style="display: none;" type="radio"><label for="model1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">自由擂 1V1 墨家</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">自由擂 1V1 墨家</span></label></li>
+                    <li><input name="model" value="1" class="labelauty" id="model2" style="display: none;" type="radio"><label for="model2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">自由擂 3V3 长平</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">自由擂 3V3 长平</span></label></li>
+                    <li><input name="model" value="2" class="labelauty" id="model3" style="display: none;" type="radio"><label for="model3"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">自由擂 5V5 深渊</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">自由擂 5V5 深渊</span></label></li>
+                    <li><input name="model" value="3" class="labelauty" id="model4" style="display: none;" type="radio"><label for="model4"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">自由擂 5V5 王者</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">自由擂 5V5 王者</span></label></li>
+                    <li><input name="model" value="4" class="labelauty" id="model5" style="display: none;" type="radio"><label for="model5"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">自由擂 5V5 征召</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">自由擂 5V5 征召</span></label></li>
+                    <li><input name="model" value="5" class="labelauty" id="model6" style="display: none;" type="radio"><label for="model6"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">输赢排位赛：单排</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">输赢排位赛</span></label></li>
+                    <li><input name="model" value="6" class="labelauty" id="model7" style="display: none;" type="radio"><label for="model7"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">排位输赢「大」</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">排位输赢「大」</span></label></li>
+                    <li><input name="model" value="7" class="labelauty" id="model8" style="display: none;" type="radio"><label for="model8"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">排位输赢「小」</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">排位输赢「小」</span></label></li>
+                    <li><input name="model" value="8" class="labelauty" id="model9" style="display: none;" type="radio"><label for="model9"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">排位输赢「单」</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">排位输赢「单」</span></label></li>
+                    <li><input name="model" value="9" class="labelauty" id="model10" style="display: none;" type="radio"><label for="model10"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">排位输赢「双」</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">排位输赢「双」</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item">
+                <span>选择场次类型</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="money_type" value="1" class="labelauty" id="zs" style="display: none;" type="radio"><label for="zs"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">钻石场</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">钻石场</span></label></li>
+                    <li><input name="money_type" value="0" class="labelauty" id="jb" style="display: none;" type="radio"><label for="jb"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">金币场</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">金币场</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item" id="integral_select" hidden="">
+                <span>钻石选择</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="integral_region" value="0" class="labelauty" id="integral1" style="display: none;" type="radio"><label for="integral1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">30-100</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">30-100</span></label></li>
+                    <li><input name="integral_region" value="1" class="labelauty" id="integral2" style="display: none;" type="radio"><label for="integral2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">100-500</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">100-500</span></label></li>
+                    <li><input name="integral_region" value="2" class="labelauty" id="integral3" style="display: none;" type="radio"><label for="integral3"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">500-1000</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">500-1000</span></label></li>
+                    <li><input name="integral_region" value="3" class="labelauty" id="integral4" style="display: none;" type="radio"><label for="integral4"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">1000-3000</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">1000-3000</span></label></li>
+                    <li><input name="integral_region" value="4" class="labelauty" id="integral5" style="display: none;" type="radio"><label for="integral5"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">3000以上</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">3000以上</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item" id="gold_select" hidden="">
+                <span>金币选择</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="integral_region" value="100" class="labelauty" id="gold1" style="display: none;" type="radio"><label for="gold1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">100</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">100</span></label></li>
+                    <li><input name="integral_region" value="200" class="labelauty" id="gold2" style="display: none;" type="radio"><label for="gold2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">200</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">200</span></label></li>
+                    <li><input name="integral_region" value="500" class="labelauty" id="gold3" style="display: none;" type="radio"><label for="gold3"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">500</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">500</span></label></li>
+                    <li><input name="integral_region" value="1000" class="labelauty" id="gold4" style="display: none;" type="radio"><label for="gold4"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">1000</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">1000</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item">
+                <span>手机系统</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="systems_name" value="1" class="labelauty" id="system1" style="display: none;" type="radio"><label for="system1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">苹果</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">苹果</span></label></li>
+                    <li><input name="systems_name" value="0" class="labelauty" id="system2" style="display: none;" type="radio"><label for="system2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">安卓</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">安卓</span></label></li>
+                </ul>
+            </div>
+            <div class="select-item">
+                <span>房间状态</span>
+                <ul class="dowebok" style="margin: 0">
+                    <li><input name="status" value="0" class="labelauty" id="state1" style="display: none;" type="radio"><label for="state1"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">等待中</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">等待中</span></label></li>
+                    <li><input name="status" value="1" class="labelauty" id="state2" style="display: none;" type="radio"><label for="state2"><span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">进行中</span><span class="labelauty-checked-image"></span><span class="labelauty-checked">进行中</span></label></li>
+                </ul>
+            </div>
+
+            <div class="select-footer">
+                <a href="#"><span class="confirm-btn" onclick="onSerach()">确定</span></a>
+            </div>
+
+        </div>
+        <div class="am-cf"></div>
+
+        <div class="sort-box" style="height: 26px;background: #333;width: 100%;border-bottom: 1px solid #ECECEC">
+            <div class="sort-item" data-type="0" id="date">按时间↓</div>
+            <div class="sort-item newRoad" data-type="1" id="num">个数</div>
+            <div class="sort-item" data-type="2" id="money">金币场</div>
+            <div class="sort-item" data-type="3" id="integral">钻石场</div>
+            <div class="sort-item" id="sc" onclick="showSelect(this)">筛选</div>
+        </div>
+    </div>
+
+
+    <div class="ring" id="room_list">
+
+        <!--类名对应对战模式，换背景图-->
+        <a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36777">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36777</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_004.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">Cm吃藕丑</span>
+                        <span class="username">龙岩市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            3000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            等待打擂中...
+                        </span>
+                        <!--<span>06月25日 20:47</span>-->
+                    </div>
+                    <!--等待用户加入-->
+                    <div class="am-u-sm-4 am-text-center">
+                        <img src="~/Img/wait.png" class="am-round" alt="" width="70" height="70"><br>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36776">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36776</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">凉</span>
+                        <span class="username">北京市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            3000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            等待打擂中...
+                        </span>
+                        <!--<span>06月25日 20:46</span>-->
+                    </div>
+                    <!--等待用户加入-->
+                    <div class="am-u-sm-4 am-text-center">
+                        <img src="~/Img/wait.png" class="am-round" alt="" width="70" height="70"><br>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36774">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36774</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_002.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">Faine</span>
+                        <span class="username">景德镇市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            8000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 20:38</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36772">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36772</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/default_image.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">Mr.c</span>
+                        <span class="username">龙岩市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            1200
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 20:16</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36771">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36771</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/default_image.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">梦魇</span>
+                        <span class="username">杭州市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            2000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 20:05</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36770">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36770</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_003.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">木头</span>
+                        <span class="username">南京市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            2000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 20:05</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36769">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36769</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_002.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">Faine</span>
+                        <span class="username">景德镇市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            5000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 20:02</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36767">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36767</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_002.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">Faine</span>
+                        <span class="username">景德镇市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            5000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 19:45</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36765">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36765</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_003.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">木头</span>
+                        <span class="username">南京市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            2000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 19:42</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><a onclick="putRing(this)" data-password="" data-is_need_password="1" data-id="36764">
+            <div class="ring-list ring-5v5">
+
+                <div class="am-g">
+                    <div class="am-u-sm-12">
+                        <span>擂台号:36764</span>
+                    </div>
+                    <div class="am-u-sm-offset-1 am-u-sm-10 am-u-end">
+                        <span class="oath">擂台宣言：等你来战！</span>
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/default_image.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/boy.png" alt="" width="20">
+                        <span class="username">梦魇</span>
+                        <span class="username">杭州市</span>
+                    </div>
+                    <div class="am-u-sm-4 am-padding-0 am-text-center ring-list-detail">
+                        <img src="~/Img/vs.png" alt="" width="60">
+                        <span>输赢排位赛</span>
+                        <span>
+                            <img src="~/Img/diamond.png" style="display: inline-block;margin-top: -3px" alt="" width="14">
+                            2000
+                        </span>
+                        <span>
+                            <img src="~/Img/pg.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">苹果</span>                            <img src="~/Img/wx.png" alt="" width="12"><span style="vertical-align: middle;display: inline-block">微信区</span>
+                        </span>
+                        <span>
+                            正在打擂中...
+                        </span>
+                        <!--<span>06月25日 19:42</span>-->
+                    </div>
+                    <div class="am-u-sm-4 am-text-center">
+                        <!--用户头像 -->
+                        <img src="~/Img/132_005.jpg" class="am-round" alt="" width="70" height="70"><br>
+                        <img src="~/Img/girl.png" alt="" width="20">                        <span class="username">微风竞技官方系统号</span>
+                        <span class="username">上海市</span>
+                    </div>
+                </div>
+            </div>
+        </a><input id="totalpage" value="525" type="hidden">
+        <script>
+    function putRing(input) {
+        var password = $(input).data('password');
+        var is_need_password = $(input).data('is_need_password');
+        var id = $(input).data('id');
+        console.info(is_need_password);
+        var success = false;
+        $.ajax({
+            type: "POST",
+            url: "/Home/checkRoom",
+            async: false,
+            data: {
+                room_id: id
+            },
+            dataType: "json",
+            success: function (data) {
+                success = data.success;
+                if(!data.success){
+                    if(data.type != 1) {
+                        layer.msg(data.message);
+                    }else{
+                        layer.confirm('对不起，您尚未完善段位信息无法进入，请先完善！', {
+                            btn: ['立即前往','稍后再说'] //按钮
+                        }, function(){
+                            window.location.href = '/Home/settings';
+                        }, function(){
+
+                        });
+                    }
+                }
+            },
+            error: function (data) {
+                layer.msg('服务器繁忙！');
+            }
+        });
+        if(!success){
+            return;
+        }
+        if(password != '' && is_need_password){
+            layer.prompt({title: '请输入房间密码', formType: 1}, function (pass, index) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/checkPassWord",
+                    async: false,
+                    data: {
+                        room_id: id,
+                        password:pass
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        console.info(data);
+                        layer.msg(data.message);
+                        if(data.success){
+                            window.location.href = '/Home/Room/detail?room_id='+id+'&password='+pass;
+                        }
+                    },
+                    error: function (data) {
+                        layer.msg('服务器繁忙！');
+                    }
+                });
+            });
+        }else{
+            window.location.href = '/Home/Room/detail?room_id='+id;
+        }
+    }
+        </script>
+    </div>
+    <a href="#"><img src="~/Img/ic_add_room.png" class="am-round" alt="" style="position: fixed;right: 10px;bottom: 100px;" width="70"></a>
+
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/amazeui.js"></script>
+    <script src="~/Scripts/layer.js"></script>
+    <style>
+        .am-navbar-nav a, a:link, a:visited, a:hover, a:active {
+            color: #8A8A8A;
+        }
+    </style>
+
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="" style="max-width: 640px;left: auto">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4">
+            <li>
+                <a href="~/Home/Index" class="">
+                    <img src="~/Img/home.png" alt="首页">
+                    <span class="am-navbar-label">首页</span>
+                </a>
+            </li>
+            <li>
+                <a onclick="goToRoomByLevel()" class="">
+                    <img src="~/Img/ring_yes.png" alt="擂台">
+                    <span class="am-navbar-label" style="color: #F6DB7F;">擂台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/event.png" alt="赛事">
+                    <span class="am-navbar-label">赛事</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/award.png" alt="领奖台">
+                    <span class="am-navbar-label">领奖台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/me.png" alt="我的">
+                    <span class="am-navbar-label">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+//
+    function goToRoomByLevel(){
+        $.ajax({
+            type: "POST",
+            url: "/Home/Room/checkLevel",
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                if(data.success){
+                    window.location.href='/Home/Room/index';
+                }else{
+                    layer.confirm('对不起，您尚未完善段位信息无法进入，请先完善！', {
+                        btn: ['立即前往','稍后再说'], //按钮
+                        closeBtn:0,
+                        shadeClose:true,
+                        btnAlign:'c'
+                    }, function(){
+                        window.location.href = '/Home/Index/settings';
+                    }, function(){
+
+                    });
+                }
+            },
+            error: function (data) {
+                layer.msg('服务器繁忙！');
+            }
+        });
+    }
+    </script>
+    <script type="text/javascript">
+    var date_sort = 0;
+    var money_sort = '';
+    //设置搜索栏宽度
+    $(function () {
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        if (windowWidth <= 640) {
+            $('.header-content').width(windowWidth - 75);
+        } else {
+            $('.header-content').width(640 - 125);
+        }
+        $('.select-box').height(windowHeight - 98);
+    });
+
+    $("input[name='money_type']").change(
+        function () {
+            moneyTypeChange();
+        }
+    );
+
+    function moneyTypeChange(){
+        var money_type = $("input[name='money_type']:checked").val();
+//        console.info(money_type);
+        if(money_type == 0){    //0金币
+            $('#gold_select').show();
+            $('#integral_select').hide();
+        }else{  //钻石
+            $('#integral_select').show();
+            $('#gold_select').hide();
+        }
+    }
+
+    function showSelect(){
+        $('#sc').toggleClass('selectcolor');
+        $('html,body').toggleClass('ovfHiden');
+        $('.select-box').slideToggle();
+    }
+
+    //日期
+    $('#date').click(function(){
+        $('#date').toggleClass('selectcolor');
+        if($('#date').hasClass('selectcolor')){
+            $('#date').html('按时间↑');
+            date_sort = 1;
+        }else{
+            $('#date').html('按时间↓');
+            date_sort =0;
+        }
+        page = 1;
+        is_search =1;
+        searchRoomList();
+    });
+
+    //金额
+    $('#num').click(function(){
+        if($('#money').hasClass('selectcolor')||$('#integral').hasClass('selectcolor')){
+            $('#num').toggleClass('selectcolor');
+            if($('#num').hasClass('selectcolor')){
+
+                $('#num').html('个数↑');
+                money_sort = 1;
+            }else{
+                $('#num').html('个数↓');
+                money_sort =0;
+            }
+            page = 1;
+            is_search =1;
+            searchRoomList();
+        }
+
+    });
+    $('#money').click(function(){
+        $('#num').removeClass('newRoad');
+        $('#money').addClass('selectcolor');
+        $('#integral').removeClass('selectcolor');
+        $('#jb').prop("checked",true);
+        $('#zs').prop('checked',false);
+        console.log($("input[name='money_type']:checked").val());
+        moneyTypeChange();
+        page = 1;
+        is_search =1;
+        searchRoomList();
+    });
+    $('#integral').click(function(){
+        $('#num').removeClass('newRoad');
+        $('#integral').addClass('selectcolor');
+        $('#money').removeClass('selectcolor');
+
+        $('#zs').prop("checked",true);
+        $('#jb').prop('checked',false);
+        console.log($("input[name='money_type']:checked").val());
+        moneyTypeChange();
+        page = 1;
+        is_search =1;
+        searchRoomList();
+    });
+//    dateunder
+        //搜索栏
+    $(function () {
+        $('#search').focus(function () {
+            $('html,body').addClass('ovfHiden');
+            $('.select-box').slideDown();
+        });
+        $('header').click(function () {
+            $('html,body').removeClass('ovfHiden');
+            $('.select-box').slideUp();
+        });
+        $('.select-header').click(function () {
+            $('html,body').removeClass('ovfHiden');
+            $('.select-box').slideUp();
+        })
+    });
+
+    function check(input){
+        if(input == undefined){
+            return '';
+        }
+        return input;
+    }
+
+    var page=1; //当前页的页码
+    var allpage =1; //总页码，会从后台获取
+    var is_search = false;
+    $(function () {
+        searchRoomListByPage(1);
+    });
+
+
+    function scrollFn(){
+        allpage = $('#totalpage').val();
+        //真实内容的高度
+        var pageHeight = Math.max(document.body.scrollHeight,document.body.offsetHeight);
+        //视窗的高度
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+        //隐藏的高度
+        var scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if(pageHeight - viewportHeight - scrollHeight < 20){  //如果满足触发条件，执行
+            if(page <= allpage) {
+                searchRoomList();
+            }
+        }
+    }
+    $(window).bind("scroll",scrollFn);  //绑定滚动事件
+    function searchRoomListByPage(pagenum) {
+        //提交form
+        $('#room_pagenum_hidden').val(pagenum);
+        searchRoomList();
+    }
+
+    function onSerach() {
+        $('html,body').removeClass('ovfHiden');
+        $('.select-box').slideUp();
+        search();
+    }
+
+    function search(){
+        page = 1;
+        is_search = true;
+        searchRoomList();
+    }
+
+    function searchRoomList() {
+        var region = $("input[name='region']:checked").val();
+        var systems_name = $("input[name='systems_name']:checked").val();
+        var integral_region = $("input[name='integral_region']:checked").val();
+        var money_type = $("input[name='money_type']:checked").val();
+        var model = $("input[name='model']:checked").val();
+        var status = $("input[name='status']:checked").val();
+        var search = $("#search").val();
+        var type = check($('#type').val());
+        var level = check($('#level').val());
+        region = check(region);
+        systems_name = check(systems_name);
+        integral_region = check(integral_region);
+        money_type = check(money_type);
+        model = check(model);
+        status = check(status);
+        search = check(search);
+        $.ajax({
+            type: "POST",
+            url: "/Home/Room/ajaxRoomList",
+            async: false,
+            data: {
+                pagenum: page,
+                region :region,
+                systems_name :systems_name,
+                integral_region :integral_region,
+                money_type :money_type,
+                model :model,
+                status :status,
+                search :search,
+                date_sort:date_sort,
+                money_sort:money_sort,
+                level:level,
+                type:type
+            },
+//            dataType: "json",
+            success: function (data) {
+//                console.info(data);
+                page++;  //页数加1
+                if(is_search){
+                    $('#room_list').empty().append(data);
+                }else{
+                    $('#room_list').append(data);
+                }
+                is_search = false;
+                AMUI.gallery.init();
+//                $("img .lazy").lazyload();
+            },
+            error: function (data) {
+                console.info(data);
+            }
+        });
+    }
+    </script>
+
+</body>
+</html>

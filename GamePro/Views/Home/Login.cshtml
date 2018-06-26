@@ -1,0 +1,233 @@
+﻿
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>荣耀联盟</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <link href="~/Content/amazeui.min.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+
+    <link href="~/Content/select_city.css" rel="stylesheet" />
+
+    <!--<link rel="stylesheet" href="/Public/assets/css/index.css">-->
+    <!--必要样式-->
+    <style>
+        body {
+            background: #333;
+            color: #FFF;
+            font-size: 15px;
+        }
+
+        input {
+            background: #333;
+            border: none;
+            border-bottom: 1px solid #FFF;
+            /*line-height: 20px;*/
+            width: 100%;
+            font-size: 13px;
+            margin-top: 2px;
+            padding: 10px 0 5px;
+            text-align: center;
+        }
+
+        .info-wrap {
+            padding: 0px 30px 0 30px;
+        }
+
+            .info-wrap .am-g {
+                margin-bottom: 10px;
+            }
+
+        .info-wrap-item span {
+            line-height: 40px;
+            text-align: left;
+        }
+
+        .preduct label {
+            cursor: pointer;
+            padding-left: 16px;
+            line-height: 13px;
+            margin-top: 13px;
+            margin-left: -2px;
+            font-weight: 100;
+            background: url('../../Img/circle.png') no-repeat;
+            background-size: 12px;
+        }
+
+        input[type="radio"] {
+            margin: 5px 5px 0px 5px;
+            display: none;
+        }
+
+        input {
+            border-radius: 0;
+        }
+
+        .radio-label:checked + label {
+            background: url('../../Img/draw.png') no-repeat;
+            background-size: 12px;
+        }
+
+        .code-btn {
+            color: #F6DB7F;
+            font-size: 10px;
+            display: inline-block;
+            width: 100%;
+            border: 1px solid #F6DB7F;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 8px;
+            background: #333;
+            line-height: 22px;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+            .code-btn[disabled=disabled] {
+                color: #999;
+                border-color: #999;
+            }
+
+        .submit-btn {
+            color: #F6DB7F;
+            line-height: 20px;
+            border: 1px solid #F6DB7F;
+            border-radius: 5px;
+            background: #333;
+            font-size: 14px;
+            box-sizing: border-box;
+            /*width: 115px;*/
+        }
+
+        .note {
+            font-size: 12px;
+            color: #FF1D1D;
+        }
+
+        .am-dropdown-content {
+            color: #333;
+        }
+
+        .am-selected-btn {
+            width: auto;
+        }
+
+            .am-selected-btn.am-btn-default {
+                background-color: #FFF;
+            }
+
+        .am-header .am-header-title {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header data-am-widget="header" class="am-header am-header-default">
+        <h1 class="am-header-title">
+            <a href="#">
+                荣耀联盟竞技比赛系统
+            </a>
+        </h1>
+    </header>
+    <!--信息资料-->
+    <form id="settings_form"  action="~/Home/Login" method="post">
+        <div class="info-wrap" style="margin-top: 50px">
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>手&nbsp;&nbsp;机&nbsp;&nbsp;号：</span>
+                </div>
+                <div class="am-u-sm-8  am-padding-right-0">
+                    <input type="text" name="phone" id="phone" placeholder="手机号" value="" maxlength="11" style="text-align: center">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>密&nbsp;&nbsp;码：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="password" name="password" placeholder="密码">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-text-center am-margin-top-sm">
+                    @*<input type="submit" value="选手登陆" class="submit-btn"/>*@
+                    <input type="button" value="选手登陆" onclick="doLogin()" class="submit-btn">
+                </div>
+                <div class="am-u-sm-4 am-text-center am-margin-top-sm">
+                    <input type="button" value="参赛报名" onclick="doRegister()" class="submit-btn">
+                </div>
+                <a href="/index.php/Home/Login/customerCode">
+                    <div class="am-u-sm-4 am-text-center am-margin-top-sm">
+                        <input type="button" value="联系客服" class="submit-btn">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </form>
+
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+
+
+    <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/angular.min.js"></script>
+    <script src="~/Content/amazeui.min.js"></script>
+
+
+    <script src="~/Content/layer.js"></script>
+    <script src="~/Content/select_city.js"></script>
+
+    <script type="text/javascript">
+
+        function doLogin() {
+            $.ajax({
+                url: "/Home/Login",
+                type: "post",
+                dataType: "json",
+                data: $('#settings_form').serialize(),
+                success: function (data) {
+                    layer.msg(data, { type: 1, time: 1000 }, function () {
+                        if (data == "登陆成功") {
+                            window.location.href = '/Home/Index';
+                        }
+                    });
+                    //
+                },
+                error: function (data) {
+                    alert(aa);
+                    layer.msg('服务器繁忙！', { type: 1, time: 3000 }, function () {
+                        //                        location.reload();
+                    });
+                }
+            });
+        }
+        function doRegister() {
+            window.location.href = '/Home/regist';
+        }
+
+    </script>
+</body>
+</html>

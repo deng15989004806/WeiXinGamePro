@@ -1,0 +1,499 @@
+﻿
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>王者竟技</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="~/Content/amazeui.min.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+    <link href="~/Content/select_city.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="/Public/assets/css/index.css">-->
+    <!--必要样式-->
+
+ 
+    
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+    <style>
+        body {
+            background: #333;
+            color: #FFF;
+            font-size: 15px;
+        }
+
+        input[type=text] {
+            background: #333;
+            border: none;
+            border-bottom: 1px solid #FFF;
+            /*line-height: 20px;*/
+            width: 100%;
+            font-size: 13px;
+            margin-top: 2px;
+            padding: 10px 0 5px;
+            text-align: center;
+        }
+
+        input {
+            background: #333;
+            border: none;
+            border-bottom: 1px solid #FFF;
+            /*line-height: 20px;*/
+            width: 100%;
+            font-size: 13px;
+            margin-top: 2px;
+            padding: 10px 0 5px;
+            text-align: center;
+        }
+
+        .info-wrap {
+            padding: 0px 30px 0 30px;
+        }
+
+            .info-wrap .am-g {
+                margin-bottom: 10px;
+            }
+
+        .info-wrap-item span {
+            line-height: 40px;
+            text-align: left;
+        }
+
+        .preduct label {
+            cursor: pointer;
+            padding-left: 16px;
+            line-height: 13px;
+            margin-top: 13px;
+            margin-left: -2px;
+            font-weight: 100;
+            background: url('../../Img/circle.png') no-repeat;
+            background-size: 12px;
+        }
+
+        input[type="radio"] {
+            margin: 5px 5px 0px 5px;
+            display: none;
+        }
+
+        input {
+            border-radius: 0;
+        }
+
+        .radio-label:checked + label {
+            background: url('../../Img/draw.png') no-repeat;
+            background-size: 12px;
+        }
+
+        .code-btn {
+            color: #F6DB7F;
+            font-size: 10px;
+            display: inline-block;
+            width: 100%;
+            border: 1px solid #F6DB7F;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 8px;
+            background: #333;
+            line-height: 22px;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+            .code-btn[disabled=disabled] {
+                color: #999;
+                border-color: #999;
+            }
+
+        .submit-btn {
+            color: #F6DB7F;
+            line-height: 36px;
+            border: 1px solid #F6DB7F;
+            border-radius: 5px;
+            background: #333;
+            font-size: 18px;
+            width: 115px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #FF1D1D;
+        }
+
+        .am-dropdown-content {
+            color: #333;
+        }
+
+        .am-selected-btn {
+            width: auto;
+        }
+
+            .am-selected-btn.am-btn-default {
+                background-color: #FFF;
+            }
+    </style>
+</head>
+
+<body>
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="/Home/Index" class="">
+                <img src="~/Img/left.png" alt="" style="margin: 5px">参赛登录
+            </a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                完善参赛资料
+            </a>
+        </h1>
+    </header>
+    <!--头像-->
+    <!--信息资料-->
+    <form id="settings_form">
+
+        <input type="hidden" name="parent_id" value="0">
+        <div class="info-wrap">
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0  am-text-right info-wrap-item">
+                    <span>昵称：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="text" id="nickname" name="nickname" value="" placeholder="微信昵称">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0  am-text-right info-wrap-item">
+                    <span>游戏昵称：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="text" id="game_name" name="game_name" value="" placeholder="游戏昵称">
+                </div>
+            </div>
+            <!--<div class="am-g">-->
+            <!--<div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">-->
+            <!--<span>微&nbsp;&nbsp;信&nbsp;&nbsp;号：</span>-->
+            <!--</div>-->
+            <!--<div class="am-u-sm-8  ">-->
+            <!--<input type="text" name="wechat_number" value="" placeholder="微信号">-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="text" class="select-value" id="region_name"value="" name="region_name" placeholder="地区">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>游戏战区：</span>
+                </div>
+                <div class="am-u-sm-8  preduct  " id="region">
+                    <input type="radio" id="area_wx" value="1" name="region" class="radio-label" checked="checked" />
+                    <label class="staff" for="area_wx">微信区</label>
+                    <input type="radio" id="area_qq" value="2" name="region" class="radio-label" />
+                    <label class="staff" for="area_qq" style="margin-left: 20px">QQ区</label>
+                </div>
+
+                <!---->
+                <!--<div class="am-u-sm-4 am-padding-right-0 preduct ">-->
+                <!--<input type="radio" id="area_wx1" value="1"  name="region" class=" radio-label">-->
+                <!--<label class="staff"  for="area_wx1">微信区</label>-->
+                <!--</div>-->
+                <!--<div class="am-u-sm-4 preduct ">-->
+                <!--<input type="radio" value="0" id="area_qq1" name="region" class=" radio-label" checked>-->
+                <!--<label class="staff"  for="area_qq1">QQ区</label>-->
+                <!--</div>-->
+                <!---->
+            </div>
+            <input type="hidden" name="systems_name" value="1">
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>当前段位：</span>
+                </div>
+                <div class="am-u-sm-4">
+                    <select name="level" id="level" data-am-selected="">
+                        <option value="" selected>请选择当前段位</option>
+                        <option value="1">青铜</option>
+                        <option value="2">白银</option>
+                        <option value="3">黄金</option>
+                        <option value="4">铂金</option>
+                        <option value="5">钻石</option>
+                        <option value="6">星耀</option>
+                        <option value="7">王者</option>
+                    </select>
+                </div>
+                <div class="am-u-sm-4">
+
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>手&nbsp;&nbsp;机&nbsp;&nbsp;号：</span>
+                </div>
+                <div class="am-u-sm-5  am-padding-right-0">
+                    <input type="text" name="phone" id="phone" placeholder="手机号" value="" maxlength="11" style="text-align: center" required  onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                </div>
+                <div class="am-u-sm-3 am-padding-0 ">
+                    <button class="code-btn"  type="button" onclick="getCode(this,true)">获取验证码</button>
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>验&nbsp;&nbsp;证&nbsp;&nbsp;码：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="text" id="code" name="code" placeholder="验证码">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>邀&nbsp;&nbsp;请&nbsp;&nbsp;码：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="text" id="InvitationCode" name="InvitationCode" placeholder="邀请码">
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>设&nbsp;&nbsp;置&nbsp;&nbsp;密&nbsp;&nbsp;码：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="password" id="password" name="password" placeholder="设置密码" value="" maxlength="11" style="text-align: center" required>
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span>确&nbsp;&nbsp;认&nbsp;&nbsp;密&nbsp;&nbsp;码：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <input type="password" id="re_password" name="re_password" placeholder="确认密码" value="" maxlength="11" style="text-align: center" required>
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-12 am-text-center am-margin-top-sm">
+                    <input type="button" value="提交" name="ajaxbtn " onclick="setUserInfo()" class="submit-btn">
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <div id="tishi"></div>
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+
+
+
+
+    <script src="~/Content/jquery.js"></script>
+
+   
+
+    <script src="~/Content/angular.min.js"></script>
+    <script src="~/Content/amazeui.min.js"></script>
+
+
+    <script src="~/Content/layer.js"></script>
+    <script src="~/Content/select_city.js"></script>
+
+
+    <script type="text/javascript">
+        function isPhoneNo(phone) {
+            var pattern = /^1[34578]\d{9}$/;
+            return pattern.test(phone);
+        }
+
+        function setUserInfo() {
+
+            var nickname = $('#nickname').val();
+            
+            if (nickname == null || nickname=='') {
+                layer.msg('昵称不能为空,请重新输入');
+                return;
+            }
+
+            var game_name = $('#game_name').val();
+
+            if (game_name == null || game_name == '') {
+                layer.msg('游戏昵称不能为空,请重新输入');
+                return;
+            }
+
+
+            var region_name = $('#region_name').val();
+
+            if (region_name == null || region_name == '') {
+                layer.msg('地区不能为空,请重新输入');
+                return;
+            }
+
+            var region = $('input[name="region"]:checked').val();
+
+            if (region == null || region == '') {
+                layer.msg('游戏区不能为空,请重新输入');
+                return;
+            }
+
+            var leve = $('#level  option:selected').val();
+
+            if (leve == null || leve == '') {
+                layer.msg('当前段位不能为空,请重新输入');
+                
+                return;
+            }
+
+            var phone = $('#phone').val();
+
+            if (phone == null || phone == '') {
+                layer.msg('手机号不能为空,请重新输入');
+                return;
+            }
+
+            var code = $('#code').val();
+
+            if (code == null || code == '') {
+                layer.msg('验证码不能为空,请重新输入');
+                return;
+            }
+
+            var invitationCode = $('#InvitationCode').val();
+
+            if (invitationCode == null || invitationCode == '') {
+                layer.msg('邀请码不能为空,请重新输入');
+                return;
+            }
+
+            var password = $('#password').val();
+
+            if (password == null || password == '') {
+                layer.msg('密码不能为空,请重新输入');
+                return;
+            }
+
+            var re_password = $('#re_password').val();
+
+            if (re_password == null || re_password == '') {
+                layer.msg('确认密码不能为空,请重新输入');
+                return;
+            }
+
+            if (password != re_password) {
+                layer.msg('两次输入密码不一样,请重新输入');
+                return;
+            }
+
+            $.ajax({
+                url: "/Home/registed",
+                type: "post",
+                dataType: "json",
+                data: $('#settings_form').serialize(),
+                success: function (data) {
+                    console.info(data);
+                    layer.msg(data, { type: 1, time: 1000 }, function () {
+                        if (data=="注册成功") {
+                            window.location.href = '/Home/index';
+                        }
+                        else {
+                            alert(data.message + "alert");
+                        }
+                    });
+                    //
+                },
+                error: function (data) {
+                    layer.msg('服务器繁忙！', { type: 1, time: 1000 }, function () {
+                        //                        location.reload();
+                    });
+                }
+            });
+        }
+     
+
+        var countdown = 60;
+        function getCode(obj, isSend) {
+            var phone = $('#phone').val();
+            if (phone == '' || phone == null) {
+                layer.msg('手机号有误,请重新输入');
+                return;
+            }
+          
+            
+            var pattern = /^1[34578]\d{9}$/;
+            var isru = pattern.test(phone);
+            if (!isru) {
+                layer.msg('手机号有误,请重新输入');
+            }
+            
+                if (isSend) {
+                    var success = false;
+                    $.ajax({
+                        type: "POST",
+                        url: "/Home/getCode",
+                        async: false,
+                        dataType: "json",
+                        data: {
+                            phone: phone
+                        },
+                        success: function (data) {
+                         
+                            layer.msg(data);
+                            success = true;
+                        },
+                        error: function (data) {
+                            console.info(data);
+                        }
+                    });
+                    if (!success) {
+                        return;
+                    }
+                }
+            
+            if (countdown == 0) {
+                $(obj).attr("disabled", false);
+                $(obj).html("获取验证码");
+                countdown = 60;
+                return;
+            } else {
+                $(obj).attr("disabled", true);
+
+                $(obj).html("重新发送(" + countdown + ")");
+                countdown--;
+            }
+            setTimeout(function () {
+                getCode(obj, false)
+            }, 1000);
+        }
+        function back() {
+            if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+                window.location.href = window.document.referrer;
+            } else { window.history.go("-1"); }
+        }
+    </script>
+</body>
+</html>

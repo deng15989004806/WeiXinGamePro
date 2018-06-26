@@ -1,0 +1,1041 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0051)http://www.weifengyouxuan.com/index.php/Home/Index/ -->
+<html class="js cssanimations">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微风竞技</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <link rel="stylesheet" href="~/Content/amazeui.min.css">
+    <link rel="stylesheet" href="~/Content/app.css">
+    <link rel="stylesheet" href="~/Content/liMarquee.css">
+    <!--<link rel="stylesheet" href="/Public/assets/css/index.css">-->
+    <!--必要样式-->
+
+    <style>
+        .header-left {
+            float: left;
+            width: 60px;
+            height: 49px;
+            padding: 0 10px;
+            line-height: 45px;
+        }
+
+        .header-content {
+            float: left;
+            width: 250px;
+            height: auto;
+        }
+
+        .search {
+            height: 30px;
+            border: 1px solid #d4d4d4;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 100%;
+            padding-left: 40px;
+            font-size: 12px;
+            background-image: url('/Public/assets/i/search.png');
+            background-image: url('../.~/Img/search.png');
+            background-repeat: no-repeat;
+            background-size: 16px;
+            background-position: 18px 6px;
+            color: #999;
+        }
+
+        .header-right {
+            width: 65px;
+            float: left;
+            padding: 8px 10px 9px 10px;
+        }
+
+        .search-btn {
+            color: #F6DB7F;
+            display: inline-block;
+            border: 2px solid #F6DB7F;
+            border-radius: 10px;
+            width: 45px;
+            text-align: center;
+            height: 32px;
+            line-height: 28px;
+            font-size: 15px;
+        }
+
+        .am-slider-a1 .am-control-nav li a.am-active {
+            background: #FFF;
+        }
+
+        .notice {
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        .notice-text {
+            font-size: 14px;
+            color: #F81515;
+            font-weight: bold;
+            line-height: 32px;
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+        .notice-title {
+            font-size: 14px;
+            color: #251D02;
+            line-height: 32px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .nav-item-text {
+            display: block;
+            font-size: 12px;
+            color: #251D02;
+            line-height: 24px;
+        }
+
+        .navss {
+            padding: 15px 0 10px;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .game {
+            width: 100%;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .game-item {
+            height: 100px;
+            margin-bottom: 5px;
+            padding: 15px 20px;
+        }
+
+        .game-5v5 {
+            background: url("/Img/game_bg1.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .game-3v3 {
+            background: url("~/Img/game_bg3.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .game-1v1 {
+            background: url("~/Img/game_bg2.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .game-money {
+            background: url("~/Img/game_bg3.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .game-item-name {
+        }
+
+            .game-item-name span {
+                display: inline-block;
+                width: 100%;
+                font-size: 17px;
+                color: #FFF;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+        .game-info {
+            line-height: 24px;
+        }
+
+        .game-item-info-text {
+            color: #FFF;
+            font-size: 12px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .game-btn1 {
+            color: #FACA28;
+            border: 1px solid #FACA28;
+            width: 75px;
+            line-height: 45px;
+            display: inline-block;
+            text-align: center;
+            float: right;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .game-btn2 {
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            width: 75px;
+            line-height: 45px;
+            display: inline-block;
+            text-align: center;
+            float: right;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .game-btn3 {
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            width: 75px;
+            height: 47px;
+            line-height: 20px;
+            padding-top: 3px;
+            display: inline-block;
+            text-align: center;
+            float: right;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        .look-more {
+            line-height: 32px;
+            color: #333;
+            margin-top: -5px;
+            display: block;
+            font-size: 12px;
+        }
+
+        a, a:hover, a:visited, a:active {
+            color: #FFF;
+        }
+
+        .sign {
+            position: fixed;
+            bottom: 49px;
+            background: #FFF;
+            height: 36px;
+        }
+
+        .sign-text {
+            font-size: 14px;
+            color: #999;
+            line-height: 36px;
+        }
+
+        .sign-btn {
+            color: #F6DB7F;
+            display: inline-block;
+            border: 2px solid #F6DB7F;
+            border-radius: 10px;
+            padding: 0 10px;
+            text-align: center;
+            margin-top: 4px;
+            height: 28px;
+            line-height: 24px;
+            font-size: 15px;
+            float: right;
+        }
+
+        .str_wrap {
+            padding-left: 3em;
+            padding-right: 3em;
+            background: #fefefe;
+            height: 3em;
+            line-height: 3em;
+            width: 83%;
+            font-size: 14px;
+            color: #F81515;
+            font-weight: bold;
+        }
+
+        .ovfHiden {
+            overflow: hidden;
+            height: 100%;
+        }
+    </style>
+   
+    <link rel="stylesheet" href="~/Content/layer.css" id="layuicss-skinlayercss">
+</head>
+<body class="am-with-fixed-navbar">
+    <div class="am-g" style="background: #333;max-width: 100%">
+        <a href="#">
+            <div class="header-left">
+                <img src="~/Img/default_image.jpeg" class="am-round" width="40" height="40" alt="">
+            </div>
+        </a>
+        <div class="header-content" style="width: 515px;">
+            <form id="searchForm" action="#" method="post">
+                <input type="search" class="search" name="search" id="search" onkeyup="value=value.replace(/[^\d]/g,&#39;&#39;)" placeholder="搜索擂台号">
+            </form>
+        </div>
+        <div class="header-right ">
+            <a href="#"><span class="search-btn" onclick="search()">搜索</span></a>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div data-am-widget="slider" class="am-slider am-slider-a1 am-no-layout" data-am-slider="{&quot;directionNav&quot;:false}">
+
+        <div class="am-viewport" style="overflow: hidden; position: relative;">
+            <ul class="am-slides" style="width: 800%; transition-duration: 0s; transform: translate3d(-640px, 0px, 0px);">
+                <li class="clone" aria-hidden="true" style="width: 640px; margin-right: 0px; float: left; display: block;">
+                    <a href="#/">
+                        <img src="~/Img/5ab61dba59b30.jpg" height="190" draggable="false">
+                    </a>
+                </li>
+                <li class="am-active-slide" data-thumb-alt="" style="width: 640px; margin-right: 0px; float: left; display: block;">
+                    <a href="#/">
+                        <img src="~/Img/5ab61a1239082.jpg" height="190" draggable="false">
+                    </a>
+                </li>
+                <li data-thumb-alt="" class="" style="width: 640px; margin-right: 0px; float: left; display: block;">
+                    <a href="#/">
+                        <img src="~/Img/5ab61dba59b30.jpg" height="190" draggable="false">
+                    </a>
+                </li>
+                <li class="clone" aria-hidden="true" style="width: 640px; margin-right: 0px; float: left; display: block;">
+                    <a href="#/">
+                        <img src="~/Img/5ab61a1239082.jpg" height="190" draggable="false">
+                    </a>
+                </li>
+            </ul>
+        </div><ol class="am-control-nav am-control-paging"><li><a href="#" class="am-active">1</a><i></i></li><li><a href="#" class="">2</a><i></i></li></ol>
+    </div>
+    <!--公告-->
+    <div class="am-g notice">
+        <div class="am-u-sm-2 am-padding-right-0" style="line-height: 30px;">
+            <img src="~/Img/notice.png" width="24" alt="">
+        </div>
+        <div class="am-u-sm-10 am-padding-left-0 str1 str_wrap noStop" style="height: 42px;">
+            <div class="str_move str_origin" style="left: 61.8px;">
+                <span style="margin-right: 20px;color: #FABE30;">林守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">林守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">哑巴守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Leslie守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">稳溺守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Jacky Zhou守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得1500钻石 </span>        <!--<marquee direction="up" behavior="scroll" height="24" scrollamount="2" scrolldelay="300" scrolldelay="1000">-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[林守擂成功获得3000钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[林守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[哑巴守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[Leslie守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[尹文全守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[尹文全守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[xinxin守擂成功获得3000钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[稳溺守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[Jacky Zhou守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--<li style="list-style: none">-->
+                <!--<span class="notice-text ">-->
+                <!--[xinxin守擂成功获得1500钻石]-->
+                <!--</span>-->
+                <!--</li>-->
+                <!---->
+                <!--</marquee>-->
+                <div class="str_move str_move_clone" style="left: 100%; right: auto; width: 2085px;">
+                    <span style="margin-right: 20px;color: #FABE30;">林守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">林守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">哑巴守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Leslie守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">稳溺守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Jacky Zhou守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得1500钻石 </span>        <!--<marquee direction="up" behavior="scroll" height="24" scrollamount="2" scrolldelay="300" scrolldelay="1000">-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[林守擂成功获得3000钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[林守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[哑巴守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[Leslie守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[尹文全守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[尹文全守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[xinxin守擂成功获得3000钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[稳溺守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[Jacky Zhou守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[xinxin守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--</marquee>-->
+                </div><div class="str_move str_move_clone" style="right: 100%; left: auto; width: 2085px;">
+                    <span style="margin-right: 20px;color: #FABE30;">林守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">林守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">哑巴守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Leslie守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">尹文全守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得3000钻石 </span><span style="margin-right: 20px;color: #FABE30;">稳溺守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">Jacky Zhou守擂成功获得1500钻石 </span><span style="margin-right: 20px;color: #FABE30;">xinxin守擂成功获得1500钻石 </span>        <!--<marquee direction="up" behavior="scroll" height="24" scrollamount="2" scrolldelay="300" scrolldelay="1000">-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[林守擂成功获得3000钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[林守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[哑巴守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[Leslie守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[尹文全守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[尹文全守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[xinxin守擂成功获得3000钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[稳溺守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[Jacky Zhou守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--<li style="list-style: none">-->
+                    <!--<span class="notice-text ">-->
+                    <!--[xinxin守擂成功获得1500钻石]-->
+                    <!--</span>-->
+                    <!--</li>-->
+                    <!---->
+                    <!--</marquee>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .ring {
+            width: 100%;
+            height: auto;
+            color: #FFF;
+            font-size: 12px;
+        }
+
+        .ring-list {
+            width: 100%;
+            /*height: 190px;*/
+            padding: 5px 0;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .ring-1v1 {
+            background: url("~/Img/ring_bg1.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .ring-3v3 {
+            background: url("/~Img/ring_bg2.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .ring-5v5 {
+            background: url("~/Img/ring_bg3.png");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+
+        .oath {
+            display: inline-block;
+            width: 100%;
+            color: #FFF;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .username {
+            display: inline-block;
+            width: 100%;
+            color: #FFF;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+            vertical-align: bottom;
+        }
+
+        .ring-list-detail span {
+            display: block;
+        }
+
+        a {
+            color: #FFF;
+        }
+    </style>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 0;
+    }
+
+    
+
+
+
+
+    .red {
+        width: 300px;
+        height: 345px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 20px #666;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        z-index: 1100;
+        margin-left: -150px;
+        margin-top: -172px;
+        transform-origin: 50% 100%;
+        -webkit-transform-origin: 50% 100%;
+        display: none;
+    }
+
+    .red img {
+        width: 100%;
+        height: auto;
+    }
+
+    .red.shake {
+        animation: shake .2s infinite linear;
+        -webkit-animation: shake .2s infinite linear;
+    }
+
+    .windows {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        margin-top: -100px;
+        left: 50%;
+        margin-left: -150px;
+        border-radius: 15px;
+        background: #c7c7c7;
+        display: none;
+        z-index: 11;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 18px;
+        font-family: "微软雅黑";
+        vertical-align: middle;
+        padding-top: 60px;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        background: #c7c7c7;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+    }
+
+    .close:hover {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    .close img {
+        padding-top: 5px;
+
+    }
+
+    .opacity {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .warzoneBox {
+        background: url("~/Img/war_zone_bg.png");
+        padding: 20px 0;
+        background-size: 100% 100%;
+
+    }
+
+    .warzoneItem {
+        margin-bottom: 12px;
+    }
+
+    .warzoneItem:last-child {
+        margin-bottom: 0;
+    }
+    </style>
+    <!--圆形导航-->
+    <div class="am-g navss">
+        <a href="http://www.weifengyouxuan.com/index.php/Home/Index/gameShow">
+            <div class="am-u-sm-4 nav-item am-text-center">
+                <img src="~/Img/nav1.png" width="60" height="60" alt="">
+                <span class="nav-item-text">游戏说明</span>
+            </div>
+        </a>
+        <a href="http://www.weifengyouxuan.com/index.php/Home/Index/rank">
+            <div class="am-u-sm-4 nav-item am-text-center">
+                <img src="~/Img/nav2.png" width="60" height="60" alt="">
+                <span class="nav-item-text">排行榜</span>
+            </div>
+        </a>
+        <a href="http://www.weifengyouxuan.com/index.php/Home/Room/addUI">
+            <div class="am-u-sm-4 nav-item am-text-center">
+                <img src="~/Img/nav3.png" width="60" height="60" alt="">
+                <span class="nav-item-text">我要摆擂</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="am-g notice">
+        <div class="am-u-sm-12">
+            <img src="~/Img/star.png" width="15" alt=""><span class="notice-title">官方赛事</span>
+        </div>
+    </div>
+    <div class="game">
+        <div id="race_list">
+            <input type="hidden" id="totalpage" value="0">
+        </div>
+        <div class="am-g">
+            <a href="#">
+                <div class="am-u-sm-12 am-text-center">
+                    <span class="look-more">查看更多官方赛事&gt;</span>
+                </div>
+            </a>
+        </div>
+        <div class=" am-cf">
+        </div>
+    </div>
+    <div class="am-g notice">
+        <div class="am-u-sm-12">
+            <img src="~/Img/star.png" width="15" alt=""><span class="notice-title">资产包</span>
+        </div>
+    </div>
+    <div class="game">
+        <a onclick="alertText()">
+            <div class="game-item am-g game-money">
+                <div class="game-item-name am-u-sm-12 am-text-center">
+                    <span>微风竞技资产包</span>
+                </div>
+            </div>
+        </a>
+        <div class=" am-cf">
+        </div>
+    </div>
+
+    <!--<div class="am-g notice">-->
+    <!--<div class="am-u-sm-12">-->
+    <!--<img src="/Public/assets/i/star.png" width="15" alt=""><span class="notice-title">擂台列表</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="ring" id="room_list">-->
+    <!--&lt;!&ndash;类名对应对战模式，换背景图&ndash;&gt;-->
+    <!--</div>-->
+    <div class="am-g notice">
+        <div class="am-u-sm-12">
+            <img src="~/Img/star.png" width="15" alt=""><span class="notice-title">战区列表</span>
+        </div>
+    </div>
+    <div class="am-g warzoneBox">
+        <div class="am-u-sm-12 warzoneItem">
+            <a href="#">
+                <img src="~/Img/war_zone1.png" width="100%" alt="">
+            </a><!--王者-->
+        </div>
+
+        <div class="am-u-sm-12 warzoneItem">
+            <a href="#">
+                <img src="~/Img/war_zone2.png" width="100%" alt="">
+            </a><!--星耀 钻石-->
+        </div>
+
+        <div class="am-u-sm-12 warzoneItem">
+            <a href="#">
+                <img src="~/Img/war_zone3.png" width="100%" alt="">
+            </a><!--铂金 黄金-->
+        </div>
+        <div class="am-u-sm-12 warzoneItem">
+            <a href="#">
+                <img src="~/Img/war_zone4.png" width="100%" alt="">
+            </a><!--白银 青铜-->
+        </div>
+    </div>
+    <!--签到-->
+    <div class="am-g">
+        <div class="am-u-sm-12 sign">
+            <span class="sign-text">每日签到领取金币奖励</span>
+            <span class="sign-btn">签到</span>
+        </div>
+    </div>
+    <div class="opacity"></div>
+    <div class="red"><img src="~/Img/asd23.jpg"></div>
+    <style>
+        .am-navbar-nav a, a:link, a:visited, a:hover, a:active {
+            color: #8A8A8A;
+        }
+    </style>
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="" style="max-width: 640px;left: auto">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4">
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/home_yes.png" alt="首页">
+                    <span class="am-navbar-label" style="color: #F6DB7F;">首页</span>
+                </a>
+            </li>
+            <li>
+                <a onclick="goToRoomByLevel()" class="">
+                    <img src="~/Img/ring.png" alt="擂台">
+                    <span class="am-navbar-label">擂台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/event.png" alt="赛事">
+                    <span class="am-navbar-label">赛事</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/award.png" alt="领奖台">
+                    <span class="am-navbar-label">领奖台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <img src="~/Img/me.png" alt="我的">
+                    <span class="am-navbar-label">我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+//
+    function goToRoomByLevel(){
+        $.ajax({
+            type: "POST",
+            url: "/index.php/Home/Room/checkLevel",
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                if(data.success){
+                    window.location.href='/index.php/Home/Room/index';
+                }else{
+                    layer.confirm('对不起，您尚未完善段位信息无法进入，请先完善！', {
+                        btn: ['立即前往','稍后再说'], //按钮
+                        closeBtn:0,
+                        shadeClose:true,
+                        btnAlign:'c'
+                    }, function(){
+                        window.location.href = '/index.php/Home/Index/settings';
+                    }, function(){
+
+                    });
+                }
+            },
+            error: function (data) {
+                layer.msg('服务器繁忙！');
+            }
+        });
+    }
+    </script>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/amazeui.min.js"></script>
+    <script src="~/Scripts/layer.js"></script>
+
+    <script src="~/Scripts/jquery.liMarquee.js"></script>
+    <script type="text/javascript">
+    function alertText(){
+        layer.msg('正在开发中……', {
+            time: 20000, //20s后自动关闭
+            btn: ['确定'],
+            btnAlign:'c'
+        },function () {
+
+        });
+    }
+    //设置搜索栏宽度
+    $(function () {
+//        $('.str1').liMarquee({});
+        $(function(){
+            $('.str1').liMarquee({
+                hoverstop: false
+            });
+        });
+
+    });
+
+    $(function () {
+        var windowWidth = $(window).width();
+        if (windowWidth <= 640) {
+            $('.header-content').width(windowWidth - 125);
+        } else {
+            $('.header-content').width(640 - 125);
+        }
+//        ajaxRoomList();
+        ajaxRaceList();
+    });
+    function search() {
+        var search = $('#search').val();
+        if (search == '') {
+            return;
+        }
+        $('#searchForm').submit();
+    }
+    function ajaxRoomList() {
+        $.ajax({
+            type: "GET",
+            url: "/index.php/Home/Index/ajaxRoomList",
+            async: false,
+//            dataType: "json",
+            success: function (data) {
+                $('#room_list').append(data);
+            },
+            error: function (data) {
+                console.info(data);
+            }
+        });
+    }
+    function ajaxRaceList() {
+        $.ajax({
+            type: "GET",
+            url: "/index.php/Home/Index/ajaxRaceList",
+            async: false,
+//            dataType: "json",
+            success: function (data) {
+                $('#race_list').append(data);
+            },
+            error: function (data) {
+                console.info(data);
+            }
+        });
+    }
+    $(function () {
+        $('.sign-btn').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/index.php/Home/Index/ajaxCheckIn",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    $(this).html('已签到');
+                    layer.msg(data.message);
+                    if (data.success) {
+                        $('.sign').slideUp();
+                        $('.ring').css('marginBottom', 0);
+                    }
+                },
+                error: function (data) {
+                    console.info(data);
+                }
+            });
+        })
+    })
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        var is_first = '0';
+        var level = '6';
+        if(level == 0){
+            layer.confirm('对不起，您尚未完善段位信息无法进入，请先完善！', {
+                btn: ['立即前往'], //按钮
+                closeBtn:0,
+//                shadeClose:true,
+                btnAlign:'c'
+            }, function(){
+                window.location.href = '/index.php/Home/Index/settings';
+            });
+        }
+        if(is_first == 1){
+            $('.red').show();
+            $('.opacity').show();
+            $('html,body').addClass('ovfHiden');
+        }
+        $(".red").click(function () {
+            $(this).addClass("shake");
+            setTimeout(function () {
+                $(".red").removeClass("shake");
+
+                $(".red").fadeOut();
+                //<!--<img src="/Public/images/zssss.png"><br>-->
+                layer.msg('<img src="~/Img/zs2.png" width="70" class="bigimg"><br>点击领取500金币？', {
+                    anim: 1,
+                    time: 0 //不自动关闭
+                    ,btn: ['领取']
+                    ,btnAlign:'c'
+                    ,yes: function(index){
+                        layer.close(index);
+                        $.ajax({
+                            url:"/index.php/Home/Index/awardIntegral",
+                            type:"POST",
+                            dataType: "json",
+                            success: function(data){
+                                console.info(data);
+                                layer.msg(data.message);
+                                if(data.success){
+                                    window.location.href = '/index.php/Home/Me/index?is_show_info=1';
+                                }else{
+                                    $('.red').hide();
+                                    $('.opacity').hide();
+                                }
+                            },
+                            error:function (data) {
+                                layer.msg('服务器繁忙！',{type:1,time:1000},function(){
+//                        location.reload();
+                                });
+                            }
+                        });
+
+                    }
+                });
+            }, 2000);
+        });
+
+    });
+    </script>
+
+</body>
+</html>

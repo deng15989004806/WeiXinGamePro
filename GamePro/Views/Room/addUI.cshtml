@@ -1,0 +1,520 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="js cssanimations">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>微风竞技</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <link rel="stylesheet" href="~/Content/amazeui.css">
+    <link rel="stylesheet" href="~/Content/app.css">
+    <!--<link rel="stylesheet" href="/Public/assets/css/index.css">-->
+    <!--必要样式-->
+    <style>
+        body {
+            color: #333;
+            font-size: 15px;
+        }
+
+        input[type=text], input[type=password] {
+            background: #FFF;
+            border: 1px solid #999;
+            width: 100%;
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 4px 10px;
+        }
+
+        .detail {
+            width: 100%;
+            height: auto;
+            padding: 20px 15px 0 15px;
+        }
+
+            .detail .am-g {
+                margin-bottom: 5px;
+            }
+
+            .detail .title {
+                line-height: 40px;
+            }
+
+        .am-btn {
+            padding: 0.3em 1em;
+            border-color: #999;
+            margin-top: 5px;
+        }
+
+        .am-selected-btn {
+            width: auto;
+        }
+
+        .am-selected-list li.am-checked .am-icon-check {
+            color: #333;
+        }
+
+        .al-toggle-button {
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            width: 47px;
+            height: 27px;
+            background: #dfdfdf;
+            border-radius: 16px;
+            border: 1px solid #dfdfdf;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+            .al-toggle-button:checked {
+                border-color: #04be02;
+                background-color: #04be02;
+            }
+
+            .al-toggle-button:before, .al-toggle-button:after {
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                border-radius: 15px;
+                transition: transform 0.3s;
+                transition: -webkit-transform 0.3s;
+                transition: transform 0.3s, -webkit-transform 0.3s;
+                -webkit-transition: -webkit-transform 0.3s;
+            }
+
+            .al-toggle-button:before {
+                width: 45px;
+                background-color: #CDCDCD;
+            }
+
+            .al-toggle-button:after {
+                width: 25px;
+                background-color: white;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            }
+
+            .al-toggle-button:checked:before {
+                transform: scale(0);
+                -webkit-transform: scale(0);
+            }
+
+            .al-toggle-button:checked:after {
+                transform: translateX(20px);
+                -webkit-transform: translateX(20px);
+            }
+
+        input[type=checkbox], input[type=radio] {
+            margin: 5px 0 0 0;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            margin-top: 10px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            padding: 5px;
+        }
+
+        input[type=button] {
+            width: 65%;
+            color: #F6DB7F;
+            font-size: 15px;
+            line-height: 42px;
+            text-align: center;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            margin-top: 25px;
+        }
+
+        select {
+            border: none;
+            border-radius: 5px;
+        }
+
+        .preduct label {
+            cursor: pointer;
+            padding-left: 16px;
+            line-height: 13px;
+            margin-top: 13px;
+            margin-left: -2px;
+            font-weight: 100;
+            background: url(~/Img/circle.png) no-repeat;
+            background-size: 12px;
+        }
+
+        input[type="radio"] {
+            margin: 5px 5px 0px 5px;
+            display: none;
+        }
+
+        .radio-label:checked + label {
+            background: url(~/Img/bbbb.png) no-repeat;
+            background-size: 12px;
+        }
+
+        #jbbox {
+            display: none;
+        }
+
+        .am-btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .am-icon-caret-down:before {
+            content: '';
+        }
+
+        input {
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+
+        .confirm-btn {
+            color: #aaa;
+            display: block;
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            width: 50px;
+            font-size: 12px;
+            position: absolute;
+            top: 3px;
+        }
+
+        .confirm {
+            color: #FABE30;
+            border: 1px solid #FABE30;
+        }
+    </style>
+    <link rel="stylesheet" href="~/Content/layer.css" id="layuicss-skinlayercss">
+</head>
+
+<body>
+    <header data-am-widget="header" class="am-header am-header-default am-no-layout">
+        <div class="am-header-left am-header-nav">
+            <a onclick="back()" class="">
+                <img src="~/Img/left.png" alt="" style="margin: 5px">
+            </a>
+        </div>
+        <script>
+    function back() {
+        if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+            window.location.href = window.document.referrer;
+        } else { window.history.go("-1"); }
+    }
+        </script>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">
+                我要摆擂
+            </a>
+        </h1>
+    </header>
+
+    <div class="am-g">
+        <div class="am-u-sm-12 am-padding-0">
+            <img src="~/Img/thumb_add_room_image_375_185.png" alt="" width="100%" height="185">
+        </div>
+    </div>
+
+    <input name="type" id="type" value="" type="hidden">
+    <input name="user_id" id="user_id" value="" type="hidden">
+    <form action="">
+        <div class="detail">
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span class="title">比赛模式：</span>
+                </div>
+                <div class="am-u-sm-7 am-u-end">
+                    <select name="model" data-am-selected="" style="display: none;">
+                        <option value="5" selected="selected">输赢排位赛</option>
+                        <!--<option value="6" >排位擂 输赢 大</option>-->
+                        <!--<option value="7">排位擂 输赢 小</option>-->
+                        <!--<option value="8">排位擂 输赢 单</option>-->
+                        <!--<option value="9">排位擂 输赢 双</option>-->
+                        <option value="0">自由擂 1V1 墨家</option>
+                        <option value="1">自由擂 3V3 长平</option>
+                        <option value="2">自由擂 5V5 深渊</option>
+                        <option value="3">自由擂 5V5 王者</option>
+                        <option value="4">自由擂 5V5 征召</option>
+                    </select><div class="am-selected am-dropdown " id="am-selected-3lmu3" data-am-dropdown="">  <button type="button" class="am-selected-btn am-btn am-dropdown-toggle am-btn-default">    <span class="am-selected-status am-fl">输赢排位赛</span>    <i class="am-selected-icon am-icon-caret-down"></i>  </button>  <div class="am-selected-content am-dropdown-content">    <h2 class="am-selected-header"><span class="am-icon-chevron-left">返回</span></h2>       <ul class="am-selected-list">                     <li class="am-checked" data-index="0" data-group="0" data-value="5">         <span class="am-selected-text">输赢排位赛</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="1" data-group="0" data-value="0">         <span class="am-selected-text">自由擂 1V1 墨家</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="2" data-group="0" data-value="1">         <span class="am-selected-text">自由擂 3V3 长平</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="3" data-group="0" data-value="2">         <span class="am-selected-text">自由擂 5V5 深渊</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="4" data-group="0" data-value="3">         <span class="am-selected-text">自由擂 5V5 王者</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="5" data-group="0" data-value="4">         <span class="am-selected-text">自由擂 5V5 征召</span>         <i class="am-icon-check"></i></li>            </ul>    <div class="am-selected-hint"></div>  </div></div>
+                </div>
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span class="title">选择消耗类型：</span>
+                </div>
+                <div class="am-u-sm-6 am-u-end">
+                    <div class=" am-padding-right-0 preduct ">
+                        <input id="cc_zs" name="money_type" class="radio-label" value="1" checked="checked" type="radio">
+                        <label class="staff" for="cc_zs">钻石场</label>
+                    </div>
+
+                </div>
+                <!--<div class="am-u-sm-3 am-u-end">-->
+                <!--<div class="preduct">-->
+                <!--<input type="radio" id="cc_jb" name="money_type" class="radio-label" value="0">-->
+                <!--<label class="staff" for="cc_jb">金币场</label>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span class="title">数&nbsp;&nbsp;&nbsp;量：</span>
+                </div>
+
+                <div class="am-u-sm-3" id="bbb">
+                    <select name="bbb" id="in_num" data-am-selected="" placeholder="自定义不低于1000钻" style="display: none;">
+                        <option value="0" selected="selected">选择钻石</option>
+                        <option value="1000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="2000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="3000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="5000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    </select><div class="am-selected am-dropdown " id="am-selected-oxjy4" data-am-dropdown="">  <button type="button" class="am-selected-btn am-btn am-dropdown-toggle am-btn-default">    <span class="am-selected-status am-fl">选择钻石</span>    <i class="am-selected-icon am-icon-caret-down"></i>  </button>  <div class="am-selected-content am-dropdown-content">    <h2 class="am-selected-header"><span class="am-icon-chevron-left">返回</span></h2>       <ul class="am-selected-list">                     <li class="am-checked" data-index="0" data-group="0" data-value="0">         <span class="am-selected-text">选择钻石</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="1" data-group="0" data-value="1000">         <span class="am-selected-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="2" data-group="0" data-value="2000">         <span class="am-selected-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="3" data-group="0" data-value="3000">         <span class="am-selected-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="4" data-group="0" data-value="5000">         <span class="am-selected-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>         <i class="am-icon-check"></i></li>            </ul>    <div class="am-selected-hint"></div>  </div></div>
+                    <!--<span class="confirm-btn">30钻石</span>-->
+                </div>
+                <div class="am-u-sm-5 am-padding-right-0 " id="zsbox">
+                    <input id="integral" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="自定义不低于1000钻" style="width: 100%" type="text">
+                </div>
+
+                <!--<div class="am-u-sm-5 am-u-end" id="jbbox">-->
+                <!--<select name="integral" id="integral_select" data-am-selected="">-->
+                <!--<option>请选择金币数量</option>-->
+                <!--<option value="500">500</option>-->
+                <!--<option value="800">800</option>-->
+                <!--<option value="1000">1000</option>-->
+                <!--<option value="2000">2000</option>-->
+                <!--</select>-->
+                <!--</div>-->
+
+            </div>
+            <div class="am-g">
+                <div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">
+                    <span class="title" id="current_show_span">当前钻石：</span>
+                </div>
+                <div class="am-u-sm-8  ">
+                    <span class="title" id="user_money">0</span>
+                    <!--<input type="text"  value="0.00" readonly>-->
+                </div>
+            </div>
+            <input value="0" id="is_psw" class="al-toggle-button" type="hidden">
+            <!--<div class="am-g">-->
+            <!--<div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">-->
+            <!--<span class="title">是否设置密码：</span>-->
+            <!--</div>-->
+            <!--<div class="am-u-sm-8" style="line-height: 1rem">-->
+            <!--<input type="checkbox" value="0" id="is_psw" class="al-toggle-button">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="am-g" id="div_input_password">-->
+            <!--<div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">-->
+            <!--<span class="title">密&nbsp;&nbsp;&nbsp;码：</span>-->
+            <!--</div>-->
+            <!--<div class="am-u-sm-8  ">-->
+            <!--<input type="password" name="password" id="psw" placeholder="请输入密码" disabled>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="am-g">-->
+            <!--<div class="am-u-sm-4 am-padding-0 am-text-right info-wrap-item">-->
+            <!--<span class="title">擂台宣言：</span>-->
+            <!--</div>-->
+            <!--<div class="am-u-sm-8  ">-->
+            <!--<textarea placeholder="等你来战！" name="declaration" id="declaration" rows="3"></textarea>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+
+        <div class="am-g am-text-center" style="margin-bottom: 30px;">
+            <input id="add_button" value="摆擂" type="button">
+        </div>
+    </form>
+
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+        <div class="am-modal-dialog">
+            <div class="am-modal-bd" style="color: #251D02;" id="confirm_content">
+                对不起，您的钻石不足！
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" style="color: #333" data-am-modal-cancel="">取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm="">充值</span>
+            </div>
+        </div>
+    </div>
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/amazeui.min.js"></script>
+    <script src="~/Scripts/layer.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        //是否设置密码
+        $('#is_psw').click(function () {
+            if ($(this).is(':checked')) {
+                $('#psw').attr("disabled", false);
+                $('#psw').val('');
+            } else {
+                $('#psw').attr("disabled", true);
+                $('#psw').val('');
+            }
+        });
+
+        $('#psw').blur(function () {
+            var psw_len = $(this).val().length;
+            if (psw_len <= 5 || psw_len >= 19) {
+                layer.msg('密码长度为6~18位');
+                $(this).val('');
+            }
+        });
+//        $('#integral').focus(function(){
+//            $('#in_num').val('0');
+//         //   $('#in_num').find('option').eq(0).attr('selected', true);
+//            console.log($('#in_num').val());
+//        })
+        $("input[name='money_type']").change(function () {
+            if ($(this).val() == '1') {
+                $('#zsbox').show();
+                $('#jbbox').hide();
+//                $('#user_money').val('0.00');
+                $('#user_money').html('0');
+                $('#current_show_span').html('当前钻石：');
+                $('#bbb').show();
+//                console.log(1)
+            } else {
+                $('#jbbox').show();
+                $('#zsbox').hide();
+//                $('#user_money').val('500.00');
+                $('#user_money').html('500');
+                $('#current_show_span').html('当前金币：');
+                $('#bbb').hide();
+//                console.log(2)
+            }
+        });
+
+        $('#add_button').click(function () {
+            var declaration = $('#declaration').val();
+            var password = $('#psw').val();
+            var money_type = $("input[name='money_type']:checked").val();
+            var user_id = $('#user_id').val();//接收方id
+            if (money_type == 0) {
+                var integral = $('select[name="integral"]').val();
+            } else {    //钻石
+                var integral = $('#integral').val();    //钻石输入框数量
+                console.log(integral)
+                if(!integral){
+                    integral = $('#in_num').val();
+                    console.log(integral);
+                }
+
+            }
+
+            var model = $('select[name="model"]').val();
+//            console.info(integral);
+//            console.info(model);
+            var re = /^[1-9]+[0-9]*]*$/;
+            if (model == '') {
+                layer.msg('请选择比赛模式！');
+                return;
+            }
+            if (integral == '' || !re.test(integral)) {
+                if (money_type == 0) {
+                    layer.msg('请选择金币数量！');
+                } else {
+                    layer.msg('请输入钻石数目！');
+                }
+                return;
+            }
+//            if(declaration == ''){
+//                layer.msg('请输入擂台宣言！');
+//                return;
+//            }
+            $.ajax({
+                url: "~/Home/Room/add",
+                type: "post",
+                dataType: "json",
+//                processData: false,
+//                contentType: false,
+                data: {
+                    integral: integral,
+                    declaration: declaration,
+                    password: password,
+                    model: model,
+                    money_type: money_type,
+                    user_id: user_id
+                },
+                success: function (data) {
+                    console.info(data);
+                    if (data.code != 1)
+                        layer.msg(data.message);
+                    if (data.success) {
+                        window.location.href = '/index.php/Home/Room/detail?room_id=' + data.data.room_id;
+                    } else {
+                        if (data.code == 1) {
+                            //钻石不足
+                            layer.confirm(data.message, {
+                                btn: ['充值','取消'] //按钮
+                            }, function(){
+                                window.location.href='#';
+                            }, function(){
+
+                            });
+                        }else if(data.code == 2){
+                            layer.confirm('对不起，您尚未完善段位信息无法进入，请先完善！', {
+                                btn: ['立即前往','稍后再说'] //按钮
+                            }, function(){
+                                window.location.href = '/#';
+                            }, function(){
+
+                            });
+                        }
+                    }
+                },
+                error: function (data) {
+                    layer.msg('服务器繁忙！', {type: 1, time: 1000}, function () {
+//                        location.reload();
+                    });
+                }
+            });
+
+
+        })
+    })
+
+
+    </script>
+
+</body>
+</html>

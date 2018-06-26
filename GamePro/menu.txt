@@ -1,0 +1,13 @@
+{
+"button":
+  [
+    {"type":"view","name":"选手登录","url":"http://www.abc.karslo.com/Home/Index"},
+    {"type":"view","name":"参赛报名","url":"http://www.abc.karslo.com/Home/regist"},
+    {"name":"关于平台","sub_button":
+                                  [
+                                     {"type":"view","name":"规则介绍","url":"http://www.ppzzii.com/Home/Test"},
+                                     {"type":"view","name":"平台充值","url":"http://www.youku.com"}
+                                  ]
+     }
+  ]
+}
